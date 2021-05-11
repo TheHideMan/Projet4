@@ -1,9 +1,9 @@
 <?php $title = 'Projet 4'; ?>
 
 <?php
-    $back_controller = new BackController;
-    $reponse = $back_controller -> afficheAllPost();
-    $retour = $back_controller -> afficheReportedPost();
+    $post_controller = new PostController;
+    $reponse = $post_controller -> afficheAllPost();
+    $retour = $post_controller -> afficheReportedPost();
 ?>
       
 <?php ob_start(); ?>

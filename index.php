@@ -1,10 +1,17 @@
 <?php
     session_start();
     
-    require_once('controller/front_controller.php');
+    require_once('controller/user_controller.php');
+    require_once('controller/article_controller.php');
+    require_once('controller/chapter_controller.php');
     require_once('controller/back_controller.php');
-    $front_controller = new FrontController;
+    require_once('controller/post_controller.php');
+    
+    $user_controller = new UserController;
+    $article_controller = new ArticleController;
+    $chapter_controller = new ChapterController;
     $back_controller = new BackController;
+    $post_controller = new PostController;
     
     if (isset($_GET['action']))
         $page = $_GET['action'];
@@ -14,25 +21,25 @@
     switch ($page) {
             
         case 'articles': 
-            $reponse = $front_controller -> afficheAllArticles();
+            $reponse = $article_controller -> afficheAllArticles();
             include('view/articles.php');
             break;
         case 'chapitres': 
-            $reponse = $front_controller -> afficheAllChapters();
+            $reponse = $chapter_controller -> afficheAllChapters();
             include('view/chapitres.php');
             break;
         case 'contact':
             include ('view/contact.php');
             break;
         case 'envoie':
-            $front_controller -> send();
+            $back_controller -> sendMail();
             break;
         case 'connexion':
-            $back_controller -> connexion();
+            $user_controller -> connexion();
             include('view/connexion.php');
             break;
         case 'deconnexion':
-            $back_controller -> deconnexion();
+            $user_controller -> deconnexion();
             break;
         case 'administration':
             include('view/administration.php');
@@ -41,13 +48,13 @@
             include('view/administration.php');
             break;
         case 'currentArticle':
-            $reponse = $front_controller -> afficheArticleDemande($_GET['titre']);
+            $reponse = $article_controller -> afficheArticleDemande($_GET['titre']);
             $article = $reponse[0];
             $liste_comms = $reponse[1];
             include('view/currentArticle.php');
             break;
         case 'currentChapter':
-            $reponse = $front_controller -> afficheChapitreDemande($_GET['id']);
+            $reponse = $chapter_controller -> afficheChapterDemande($_GET['id']);
             include('view/currentChapter.php');
             break;
         case 'writeChapter':
@@ -57,19 +64,19 @@
             include('view/writeArticle.php');
             break;
         case 'envoieCommentaire':
-            $front_controller -> sendPost($_GET['titre']);
+            $post_controller -> sendPost($_GET['titre']);
             break;
         case 'delComms': 
-            $back_controller -> delPost($_GET['id']);
+            $post_controller -> delPost($_GET['id']);
             break;
         case 'signale':
-            $back_controller -> signaler($_GET['id']);
+            $post_controller -> signaler($_GET['id']);
             break;
         case 'envoieChapitre':
-            $front_controller -> sendChapter();
+            $chapter_controller -> sendChapter();
             break;
         case 'envoieArticle':
-            $front_controller -> sendArticle();
+            $article_controller -> sendArticle();
             break;
         default: 
             include('view/accueil.php');

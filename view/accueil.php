@@ -9,31 +9,31 @@
         <div class="row" id="slider" tabindex="0">
             <div class="slide col-lg-12">
                 <div class="numbertext">1 / 5</div>
-                <img src='./public/images/diapo1.jpg' class="img-responsive col-lg-12 "/>
+                <img src='./public/images/diapo1.jpg' class="img-responsive col-lg-12 " alt="un champs de fleurs devant des montagnes enneigées"/>
                 <div class="text">image alaska 1</div>
             </div>
             
             <div class="slide col-lg-12">
                 <div class="numbertext">2 / 5</div>
-                <img src='./public/images/diapo2.jpg' class="img-responsive col-lg-12 "/>
+                <img src='./public/images/diapo2.jpg' class="img-responsive col-lg-12 " alt="un paysage de montagne au printemps"/>
                 <div class="text">image alaska 2</div>
             </div>
             
             <div class="slide col-lg-12">
                 <div class="numbertext">3 / 5</div>
-                <img src='./public/images/diapo3.jpg' class="img-responsive col-lg-12 "/>
+                <img src='./public/images/diapo3.jpg' class="img-responsive col-lg-12 " alt="une vallée avec un lac et une rivière entre des montagnes"/>
                 <div class="text">image alaska 3</div>
             </div>
             
             <div class="slide col-lg-12">
                 <div class="numbertext">4 / 5</div>
-                <img src='./public/images/diapo6.jpg' class="img-responsive col-lg-12 "/>
+                <img src='./public/images/diapo6.jpg' class="img-responsive col-lg-12 " alt="une aurore boréale au dessus d'une forêt enneigée"/>
                 <div class="text">image alaska 4</div>
             </div>
             
             <div class="slide col-lg-12">
                 <div class="numbertext">5 / 5</div>
-                <img src='./public/images/diapo5.jpg' class="img-responsive col-lg-12 "/>
+                <img src='./public/images/diapo5.jpg' class="img-responsive col-lg-12 " alt="un lac gelé devant des montagnes enneigées"/>
                 <div class="text">image alaska 5</div>
             </div>
             
@@ -51,8 +51,8 @@
             <div class="col-sm-12 col-lg-12 border">
                 <h3>Retrouvez les derniers articles en date ici !</h3>
                 <?php
-                    $front_controller = new FrontController;
-                    $front_controller -> afficheArticle();
+                    $article_controller = new articleController;
+                    $article_controller -> afficheArticle();
                 ?>
             </div>
         </div>

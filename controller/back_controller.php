@@ -1,65 +1,27 @@
 <?php 
-require_once('model/back_manager.php');
+/*
+require_once('model/user_manager.php');
+require_once('model/post_manager.php');*/
 
 class BackController {
 
-    public function connexion() {
-        
-        $backManager = new BackManager;
-        if(isset($_POST['connexion'])) {
-            if(empty($_POST['user'])) {
-                echo "<p>Le champ Utilisateur est vide</p>";
-            } 
-            if(empty($_POST['password'])){
-                echo "<p>Le champ Mot de passe est vide</p>";
-            }
-            $Pseudo = htmlentities($_POST['user'], ENT_QUOTES, "ISO-8859-1");
-            $MotDePasse = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1");
-            $reponse = $backManager->getLogin($Pseudo, $MotDePasse);
-            if($reponse == false) {
-                header('Location: /Projet4/index.php');
+    public function sendMail() {
+        if (isset($_POST['message'])) {
+            $position_arobase = strpos($_POST['email'], '@');
+            if ($position_arobase === false) {
+                echo '<p>Votre email doit comporter un arobase. </p>';
             } else {
-                header('Location: /Projet4/index.php?action=pageAdmin');
-                $_SESSION['pseudo'] = $Pseudo;
+                $retour = mail('jeanforteroche@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['nom'], $_POST['prenom']);
+                if ($retour) {
+                    echo '<p> Votre message a bien été envoyé. </p>';
+                } else {
+                    echo '<p> Erreur.</p>';
+                }
             }
         }
     }
 
-    public function deconnexion() {
-        session_destroy();
-        header('Location: /Projet4/index.php ');
-    }
-
-
-    public function afficheAllPost() {
-        $backManager = new BackManager;
-        $reponse = $backManager -> getAllPosts();
-
-        return($reponse);
-    }
-
-    public function afficheReportedPost() {
-        $backManager = new BackManager;
-        $reponse = $backManager -> getReportedPosts();
-
-        return($reponse);
-    }
-
-    public function delPost($id) {
-        $backManager = new BackManager;
-        $localisation = '/Projet4/index.php?action=administration';
-
-        $backManager -> deletePost($id);
-        header ("Location: $localisation");
-    }
-
-    public function signaler($id) {
-        $backManager = new BackManager;
-        $localisation = '/Projet4/index.php?action=articles';
-
-        $backManager -> reportPost($id);
-        header ("Location: $localisation");
-    }
+    
 
 }
 

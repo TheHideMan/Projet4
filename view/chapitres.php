@@ -4,7 +4,7 @@
        
     <h1 class="text-center">PAGE DE CHAPITRES </h1>
     <h2 class="text-center">Vous retrouverez sur cette page tous les chapitres du nouveau roman de Jean Forteroche : "Billet simple pour l'Alaska"</h2>
-    <img src='./public/images/livre3.jpg' class="img-responsive col-lg-12 " />
+    <img src='./public/images/livre3.jpg' class="img-responsive col-lg-12 " alt="une tranche de livre" />
 
     <div class="container-fluid">
         <div class="row">
