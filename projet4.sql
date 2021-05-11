@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  jeu. 29 avr. 2021 à 11:14
+-- Généré le :  mar. 11 mai 2021 à 13:31
 -- Version du serveur :  5.6.34-log
 -- Version de PHP :  7.2.1
 
@@ -109,7 +109,9 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id_post`, `article_commenté`, `cal`, `pseudo`, `contenu`, `signale`) VALUES
 (4, '1er article', '21-03-22 01:17:08', 'francois ', '&lt;p&gt;int&amp;eacute;ressant&amp;nbsp;&lt;/p&gt;', 1),
 (7, '4eme article', '21-04-01 12:44:13', 'dupond', '&lt;p&gt;super site&amp;nbsp;&lt;/p&gt;', 1),
-(8, '1er article', '21-04-22 03:49:50', 'anonymous', '&lt;p&gt;ah ouais&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;', 0);
+(8, '1er article', '21-04-22 03:49:50', 'anonymous', '&lt;p&gt;ah ouais&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;', 0),
+(9, 'ARTICLE 5', '21-04-30 10:56:11', 'didier ', '&lt;p&gt;je n\'y avais pas pens&amp;eacute; merci&amp;nbsp;&lt;/p&gt;', 0),
+(10, '2eme article', '21-04-30 11:34:59', 'valentin ', '&lt;p&gt;trop bien&amp;nbsp;&lt;/p&gt;', 0);
 
 --
 -- Index pour les tables déchargées
@@ -154,7 +156,7 @@ ALTER TABLE `chapitres`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
