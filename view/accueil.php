@@ -42,8 +42,8 @@
                 
             
         </div>
-        <input type="image" id="pause" src="/Projet4/public/images/logoPause.jpg" alt=" Pause">
-        <input type="image" id="resume" src="/Projet4/public/images/logoPlay.png" alt=" Play">
+        <input type="image" id="pause" src="public/images/logoPause.jpg" alt=" Pause">
+        <input type="image" id="resume" src="public/images/logoPlay.png" alt=" Play">
     </article>
     
     <div class="container-fluid text-center">

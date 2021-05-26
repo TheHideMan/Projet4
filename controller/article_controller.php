@@ -1,5 +1,6 @@
 <?php 
 require_once('model/article_manager.php');
+require_once ('model/post_manager.php');
 
 class ArticleController {
 
@@ -44,10 +45,9 @@ class ArticleController {
 
     public function sendArticle() {
         $articleManager = new ArticleManager;
-        $localisation = '/Projet4/index.php?action=administration';
 
         $articleManager -> ajouteArticle($_POST['titre'], $_POST['date'], $_POST['contenu']);
-        header("Location: $localisation");
+        echo "<script> window.location.href = 'index.php?action=administration' </script>";
     }
 
 

@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-12" >
                 <h3 class="text-center">SECTION COMMENTAIRE</h3>
-                <form method="post" action="/Projet4/index.php?action=envoieCommentaire&titre=<?php echo $_GET['titre'] ?>" >
+                <form method="post" action="index.php?action=envoieCommentaire&titre=<?php echo $_GET['titre'] ?>" >
                     <input type="text" name="pseudo" placeholder="Votre pseudo" required/> <br/><br/>
                     <textarea name="commentaire" placeholder="Votre commentaire" ></textarea><br/>
                     <input type="submit" value="Poster le commentaire" name="poster" /><br/><br/>
@@ -42,7 +42,7 @@
                             <?php echo $liste['cal']; ?>, <strong><?php echo $liste['pseudo']; ?> </strong><br/>
                             <?php echo html_entity_decode($liste['contenu']); ?>
                         </p>
-                        <a href="/Projet4/index.php?action=signale&id=<?php echo $liste['id_post'] ?>" class="border"> Signaler </a>
+                        <a href="index.php?action=signale&id=<?php echo $liste['id_post'] ?>" class="border"> Signaler </a>
                     <?php
                         }
                     ?>

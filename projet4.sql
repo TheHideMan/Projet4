@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mar. 11 mai 2021 à 13:31
+-- Généré le :  mer. 26 mai 2021 à 10:15
 -- Version du serveur :  5.6.34-log
 -- Version de PHP :  7.2.1
 
@@ -44,8 +44,8 @@ INSERT INTO `articles` (`id`, `date_publication`, `titre`, `contenu`) VALUES
 (2, '2021-04-09', '2eme article ', 'Nunc vitae nisi vel lorem mattis tempus eget ac tellus. Aliquam erat volutpat. Morbi sollicitudin a ex sit amet volutpat. Vivamus gravida ullamcorper purus vitae consectetur. Vestibulum vel tempor tellus. Phasellus non lorem convallis, dictum odio eu, interdum nibh. Nunc vel ullamcorper urna. Duis molestie nibh eget libero consectetur auctor. Vivamus pulvinar velit eros, non condimentum felis porta sit amet.'),
 (3, '2021-04-10', '3eme article', 'Nunc scelerisque nisl quis arcu pulvinar consectetur. Nulla facilisi. Aenean id bibendum nunc. Vivamus imperdiet ut nulla et pretium. Fusce eu elit pellentesque, convallis lacus eu, facilisis lectus. Vestibulum placerat arcu ante, vitae convallis velit dignissim eu. Nullam a massa scelerisque, ultrices enim et, suscipit felis. Phasellus eleifend venenatis urna eget lobortis. Duis tincidunt sem quis lectus porta ullamcorper. Phasellus urna nibh, laoreet ac tempus consectetur, tempus quis ex. Duis sodales elementum nulla sed rutrum. Donec maximus tellus vel orci convallis ullamcorper.'),
 (4, '2021-04-11', '4eme article', 'Morbi iaculis purus ut nisl sodales ultrices. Duis vitae aliquam dui, sed laoreet orci. Curabitur est mauris, laoreet id nibh a, mollis ultricies purus. Suspendisse sed mauris tempus, mollis tortor ut, lacinia ex. Sed consectetur lectus ac enim dapibus, quis pellentesque augue tincidunt. Cras vulputate mauris ut velit euismod, cursus tempus turpis pulvinar. Integer ac odio lorem. Maecenas sit amet odio ac arcu pharetra dignissim condimentum et risus. Sed sit amet metus porta, porttitor odio sit amet, pulvinar sapien. Sed eu sapien laoreet, semper dolor at, tincidunt mauris. Pellentesque congue vehicula ante id fringilla.'),
-(5, '2021-04-21', 'ARTICLE 5', '<p>hoiufh^spidf hjsp^$idhf ^sihfihf^si hohfjvb mv^pos$fd^*ogjd*ofj^sdpoujfpog jh&ugra ve;sdpoih&ugra ve;sdfg</p>'),
-(6, '2121-04-21', 'ARTICLE 6', '<p>gggjgjgfik,kcdnhjdjdii tporie^p oi$odis$&nbsp; &nbsp;gfdhy oiuertghk fglohfog df mgfjhdmfjghdmf d</p>');
+(5, '2021-04-21', 'ARTICLE 5', 'Nisi autem rerum natura perspecta erit, nullo modo poterimus sensuum iudicia defendere. Huius ego nunc auctoritatem sequens idem faciam. Item de contrariis, a quibus ad genera formasque generum venerunt. Quid de Platone aut de Democrito loquar? Bestiarum vero nullum iudicium puto. Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere. Cave putes quicquam esse verius. Nulla profecto est, quin suam vim retineat a primo ad extremum. Quem ad modum quis ambulet, sedeat, qui ductus oris, qui vultus in quoque sit? Atque his de rebus et splendida est eorum et illustris oratio.'),
+(6, '2121-04-21', 'ARTICLE 6', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Tu vero, inquam, ducas licet, si sequetur; Dat enim intervalla et relaxat. Quid Zeno? Duo Reges: constructio interrete. Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Etiam beatissimum? Apud imperitos tum illa dicta sunt, aliquid etiam coronae datum;');
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,8 @@ INSERT INTO `posts` (`id_post`, `article_commenté`, `cal`, `pseudo`, `contenu`,
 (7, '4eme article', '21-04-01 12:44:13', 'dupond', '&lt;p&gt;super site&amp;nbsp;&lt;/p&gt;', 1),
 (8, '1er article', '21-04-22 03:49:50', 'anonymous', '&lt;p&gt;ah ouais&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;', 0),
 (9, 'ARTICLE 5', '21-04-30 10:56:11', 'didier ', '&lt;p&gt;je n\'y avais pas pens&amp;eacute; merci&amp;nbsp;&lt;/p&gt;', 0),
-(10, '2eme article', '21-04-30 11:34:59', 'valentin ', '&lt;p&gt;trop bien&amp;nbsp;&lt;/p&gt;', 0);
+(10, '2eme article', '21-04-30 11:34:59', 'valentin ', '&lt;p&gt;trop bien&amp;nbsp;&lt;/p&gt;', 0),
+(11, '1er article', '21-05-11 01:37:09', 'luc ', '&lt;p&gt;merci !&lt;/p&gt;', 0);
 
 --
 -- Index pour les tables déchargées
@@ -156,7 +157,7 @@ ALTER TABLE `chapitres`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

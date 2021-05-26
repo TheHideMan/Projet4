@@ -4,13 +4,13 @@
     require_once('controller/user_controller.php');
     require_once('controller/article_controller.php');
     require_once('controller/chapter_controller.php');
-    require_once('controller/back_controller.php');
+    require_once('controller/mail_controller.php');
     require_once('controller/post_controller.php');
     
     $user_controller = new UserController;
     $article_controller = new ArticleController;
     $chapter_controller = new ChapterController;
-    $back_controller = new BackController;
+    $mail_controller = new MailController;
     $post_controller = new PostController;
     
     if (isset($_GET['action']))
@@ -32,19 +32,15 @@
             include ('view/contact.php');
             break;
         case 'envoie':
-            $back_controller -> sendMail();
+            $mail_controller -> sendMail();
             break;
         case 'connexion':
             $user_controller -> connexion();
-            include('view/connexion.php');
             break;
         case 'deconnexion':
             $user_controller -> deconnexion();
             break;
         case 'administration':
-            include('view/administration.php');
-            break;
-        case 'pageAdmin':
             include('view/administration.php');
             break;
         case 'currentArticle':
