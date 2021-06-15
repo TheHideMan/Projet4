@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mer. 26 mai 2021 à 10:15
+-- Généré le :  mar. 15 juin 2021 à 10:28
 -- Version du serveur :  5.6.34-log
 -- Version de PHP :  7.2.1
 
@@ -112,7 +112,8 @@ INSERT INTO `posts` (`id_post`, `article_commenté`, `cal`, `pseudo`, `contenu`,
 (8, '1er article', '21-04-22 03:49:50', 'anonymous', '&lt;p&gt;ah ouais&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;', 0),
 (9, 'ARTICLE 5', '21-04-30 10:56:11', 'didier ', '&lt;p&gt;je n\'y avais pas pens&amp;eacute; merci&amp;nbsp;&lt;/p&gt;', 0),
 (10, '2eme article', '21-04-30 11:34:59', 'valentin ', '&lt;p&gt;trop bien&amp;nbsp;&lt;/p&gt;', 0),
-(11, '1er article', '21-05-11 01:37:09', 'luc ', '&lt;p&gt;merci !&lt;/p&gt;', 0);
+(11, '1er article', '21-05-11 01:37:09', 'luc ', '&lt;p&gt;merci !&lt;/p&gt;', 0),
+(12, 'ARTICLE 6', '21-06-11 02:01:59', 'vladimir ', '&lt;p&gt;Plus d infos ?&amp;nbsp;&lt;/p&gt;', 0);
 
 --
 -- Index pour les tables déchargées
@@ -157,7 +158,7 @@ ALTER TABLE `chapitres`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

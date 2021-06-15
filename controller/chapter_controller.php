@@ -23,9 +23,10 @@ class ChapterController {
 
     public function sendChapter() {
         $chapterManager = new ChapterManager;
+        $localisation = '/Projet4/index.php?action=administration';
 
         $chapterManager -> ajouteChapter($_POST['titre'], $_POST['contenu']);
-        echo "<script> window.location.href = 'index.php?action=administration' </script>";
+        header("Location: $localisation");
     }
         
 

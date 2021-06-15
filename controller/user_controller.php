@@ -16,20 +16,17 @@ class UserController {
             $MotDePasse = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1");
             $reponse = $userManager->getLogin($Pseudo, $MotDePasse);
             if($reponse == false) {
-              var_dump($reponse);
                 header('Location: index.php');
             } else {
+                header('Location: /Projet4/index.php?action=administration');
                 $_SESSION['pseudo'] = $Pseudo;
-              echo "<script> window.location.href = 'index.php?action=administration'; </script>";
-              
-                
             }
         }
     }
 
     public function deconnexion() {
         session_destroy();
-        echo "<script> window.location.href = 'index.php?'; </script>";
+        header('Location: /Projet4/index.php ');
     }
 
 

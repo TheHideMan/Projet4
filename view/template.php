@@ -6,7 +6,7 @@
         <meta name="description" content="Jean Forteroche auteur livre alaska">
         <meta name="viewport" content="width=device-width initial-scale = 1.0" >
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="/Projet4/public/css/style.css">
     </head>
     <body>
         <header>
@@ -32,7 +32,7 @@
         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <script>tinymce.init({selector:'textarea'});</script>
         
-        <script src="public/js/slider.js"></script>
-        <script src="public/js/main.js"></script>
+        <script src="/Projet4/public/js/slider.js"></script>
+        <script src="/Projet4/public/js/main.js"></script>
     </body>
 </html>

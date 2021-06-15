@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <form method="post" action="index.php?action=envoieArticle">
+                <form method="post" action="/Projet4/index.php?action=envoieArticle">
                     <input type="text" name="titre" placeholder="Titre de l'article" required/> <br/><br/>
                     <input type="date" name="date" required /> <br/> <br/>
                     <textarea name="contenu" placeholder="texte de l'article" ></textarea><br/>

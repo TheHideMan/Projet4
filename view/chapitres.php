@@ -1,4 +1,4 @@
-<?php $title = 'Projet 4'; ?>
+<?php $title = 'Projet 4 chapitres'; ?>
       
 <?php ob_start(); ?>
        
@@ -14,7 +14,7 @@
                 ?>
                 <p>
                     
-                    <strong> <a href="index.php?action=currentChapter&id=<?php echo $donnes['id']; ?>" > <?php echo $donnes['titre']; ?> </a></strong><br/>
+                    <strong> <a href="../Projet4/index.php?action=currentChapter&id=<?php echo $donnes['id']; ?>" > <?php echo $donnes['titre']; ?> </a></strong><br/>
                     <div>
                         <?php echo html_entity_decode($donnes['manu']); ?> 
                     </div>

@@ -1,4 +1,4 @@
-<?php $title = 'Projet 4'; ?>
+<?php $title = 'Projet 4 chapitre'; ?>
 
 <?php ob_start(); ?>
     
@@ -21,11 +21,6 @@
             <?php
             }
             ?>
-
-
-
-
-                
             </div>
             
         </div>

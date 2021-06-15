@@ -36,6 +36,7 @@
             break;
         case 'connexion':
             $user_controller -> connexion();
+            include('view/connexion.php');
             break;
         case 'deconnexion':
             $user_controller -> deconnexion();

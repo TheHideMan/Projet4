@@ -1,5 +1,4 @@
-<?php $title = 'Projet 4'; ?>
-<?php $metaDesc = 'indefinis'; ?>
+<?php $title = 'Projet 4 accueil'; ?>
       
 <?php ob_start(); ?>
        
@@ -42,8 +41,8 @@
                 
             
         </div>
-        <input type="image" id="pause" src="public/images/logoPause.jpg" alt=" Pause">
-        <input type="image" id="resume" src="public/images/logoPlay.png" alt=" Play">
+        <input type="image" id="pause" src="/Projet4/public/images/logoPause.jpg" alt=" Pause">
+        <input type="image" id="resume" src="/Projet4/public/images/logoPlay.png" alt=" Play">
     </article>
     
     <div class="container-fluid text-center">

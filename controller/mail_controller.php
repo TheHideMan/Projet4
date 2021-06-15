@@ -1,7 +1,4 @@
 <?php 
-/*
-require_once('model/user_manager.php');
-require_once('model/post_manager.php');*/
 
 class MailController {
 
