@@ -3,6 +3,10 @@ require_once('model/user_manager.php');
 
 class UserController {
 
+    public function inscription() {
+        
+    }
+
     public function connexion() {
         $userManager = new UserManager;
         if(isset($_POST['connexion'])) {
@@ -28,11 +32,6 @@ class UserController {
         session_destroy();
         header('Location: /Projet4/index.php ');
     }
-
-
-
-
-
 
 }
 

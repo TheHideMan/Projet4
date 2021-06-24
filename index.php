@@ -75,6 +75,14 @@
         case 'envoieArticle':
             $article_controller -> sendArticle();
             break;
+        case 'delArticle':
+            break;
+        case 'delChapter':
+            break;
+        case 'updateArticle':
+            break;
+        case 'updateChapter':
+            break;
         default: 
             include('view/accueil.php');
     }

@@ -2,8 +2,13 @@
 
 <?php
     $post_controller = new PostController;
+    $article_controller = new ArticleController;
+    $chapter_controller = new ChapterController;
+
     $reponse = $post_controller -> afficheAllPost();
     $retour = $post_controller -> afficheReportedPost();
+    $articles = $article_controller -> afficheAllArticles();
+    $chapters = $chapter_controller -> afficheAllChapters();
 ?>
       
 <?php ob_start(); ?>
@@ -50,7 +55,48 @@
             </div>
         </div>
 
-        <h2> Section édition</h2>
+        <h2 class="text-center">Section articles</h2>
+        <div class="row">
+            <div class="col-12">
+                <?php 
+                    while($donnes = $articles -> fetch()) { 
+                ?>
+                <p>
+                    <strong><?php echo $donnes['date_publication']; ?></strong> :<?php echo $donnes['titre'] ?>" > <?php echo $donnes['titre']; ?> <br/>
+                    <?php echo $donnes['contenu']; ?>
+
+                    <a href="\Projet4\index.php?action=updateArticle">Modifier l'article</a>
+                    <div><a href="\Projet4\index.php?action=delArticle">Supprimer l'article</a></div>
+                </p>
+
+                <?php 
+                    }
+                ?>
+            </div>
+        </div>
+
+        <h2 class="text-center">Section chapitres</h2>
+        <div class="row">
+            <div class="col-12">
+                <?php 
+                    while($donnes = $chapters -> fetch()) { 
+                ?>
+                <p>
+                <strong><?php echo $donnes['titre']; ?> </strong><br/>
+                    
+                        <?php echo html_entity_decode($donnes['manu']); ?> 
+                    
+                    <a href="\Projet4\index.php?action=updateChapter">Modifier le chapitre</a>
+                    <div><a href="\Projet4\index.php?action=delChapter">Supprimer le chapitre</a></div>
+                </p>
+
+                <?php 
+                    }
+                ?>
+            </div>
+        </div>
+
+        <h2 class="text-center"> Section édition</h2>
         <div class="row">
             <div class="col-6 text-center">
                 <a href="\Projet4\index.php?action=writeChapter" class="adminButton" > Rédiger un chapitre </a>
@@ -59,6 +105,8 @@
                 <a href="\Projet4\index.php?action=writeArticle" class="adminButton" > Rédiger un article </a>
             </div>
         </div>
+
+        
         
 
     </div>

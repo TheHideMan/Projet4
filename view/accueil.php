@@ -48,7 +48,7 @@
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12 col-lg-12 border">
-                <h3>Retrouvez les derniers articles en date ici !</h3>
+                <h2>Retrouvez les derniers articles en date ici !</h2>
                 <?php
                     $article_controller = new articleController;
                     $article_controller -> afficheArticle();
