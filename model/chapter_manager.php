@@ -24,6 +24,12 @@ class ChapterManager extends Manager {
         $req -> execute(array($titre, $contenu));
     }
 
+    public function deleteChapter($id) {
+        $db = $this -> dbconnect();
+        $req = $db -> prepare("DELETE FROM chapitres WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_INT);
+        $req -> execute();
+    }
 
 }
 

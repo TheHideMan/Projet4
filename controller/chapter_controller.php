@@ -29,7 +29,13 @@ class ChapterController {
         header("Location: $localisation");
     }
         
+    public function delChapter($id) {
+        $chapterManager = new ChapterManager;
+        $localisation = '/Projet4/index.php?action=administration';
 
+        $chapterManager -> deleteChapter($id);
+        header ("Location: $localisation");
+    }
     
 
 

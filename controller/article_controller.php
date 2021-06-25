@@ -50,9 +50,13 @@ class ArticleController {
         header("Location: $localisation");
     }
 
+    public function delArticle($id) {
+        $articleManager = new ArticleManager;
+        $localisation = '/Projet4/index.php?action=administration';
 
-
-    
+        $articleManager -> deleteArticle($id);
+        header ("Location: $localisation");
+    }
 }
 
 ?> 

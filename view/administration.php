@@ -66,7 +66,7 @@
                     <?php echo $donnes['contenu']; ?>
 
                     <a href="\Projet4\index.php?action=updateArticle">Modifier l'article</a>
-                    <div><a href="\Projet4\index.php?action=delArticle">Supprimer l'article</a></div>
+                    <div><a href="\Projet4\index.php?action=delArticle&id=<?php echo $donnes['id'] ?>">Supprimer l'article</a></div>
                 </p>
 
                 <?php 
@@ -87,7 +87,7 @@
                         <?php echo html_entity_decode($donnes['manu']); ?> 
                     
                     <a href="\Projet4\index.php?action=updateChapter">Modifier le chapitre</a>
-                    <div><a href="\Projet4\index.php?action=delChapter">Supprimer le chapitre</a></div>
+                    <div><a href="\Projet4\index.php?action=delChapter&id=<?php echo $donnes['id'] ?>">Supprimer le chapitre</a></div>
                 </p>
 
                 <?php 

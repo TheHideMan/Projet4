@@ -29,6 +29,11 @@ class ArticleManager extends Manager {
         $req -> execute(array($date, $titre, $contenu));
     }
 
-
+    public function deleteArticle($id) {
+        $db = $this -> dbconnect();
+        $req = $db -> prepare("DELETE FROM articles WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_INT);
+        $req -> execute();
+    }
 }
 ?>

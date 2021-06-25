@@ -76,8 +76,10 @@
             $article_controller -> sendArticle();
             break;
         case 'delArticle':
+            $article_controller -> delArticle($_GET['id']);
             break;
         case 'delChapter':
+            $chapter_controller -> delChapter($_GET['id']);
             break;
         case 'updateArticle':
             break;
