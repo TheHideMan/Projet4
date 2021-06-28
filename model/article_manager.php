@@ -35,5 +35,23 @@ class ArticleManager extends Manager {
         $req -> bindValue(':id', $id, PDO::PARAM_INT);
         $req -> execute();
     }
+
+    public function modifierArticle($id) {
+        $db = $this -> dbconnect();
+        $req = $db -> prepare("SELECT date_publication, titre, contenu FROM articles WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_INT);
+        $req -> execute();
+        return $req;
+    }
+
+    public function updateArticle($id, $dp, $titre, $txt) {
+        $db = $this -> dbconnect();
+        $req = $db -> prepare("UPDATE articles SET date_publication = :dp, titre = :titre, contenu = :txt WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_INT);
+        $req -> bindValue(':dp', $dp, PDO::PARAM_INT);
+        $req -> bindValue(':titre', $titre, PDO::PARAM_STR);
+        $req -> bindValue(':txt', $txt, PDO::PARAM_STR);
+        $req -> execute();
+    }
 }
 ?>

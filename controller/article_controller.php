@@ -57,6 +57,23 @@ class ArticleController {
         $articleManager -> deleteArticle($id);
         header ("Location: $localisation");
     }
+
+    public function upArticle($id, $dp, $titre, $txt) {
+        $articleManager = new ArticleManager;
+        $localisation = '/Projet4/index.php?action=administration';
+
+        $articleManager -> updateArticle($id, $dp, $titre, $txt);
+        header ("Location: $localisation");
+    }
+
+    public function modifierArticle($id) {
+        $articleManager = new ArticleManager;
+
+        $retour = $articleManager -> modifierArticle($id);
+        return ($retour);
+
+    }
+
 }
 
 ?> 

@@ -16,10 +16,21 @@
     <h1 class="text-center">PAGE D'ADMINISTRATION </h1>
 
     <div class="container-fluid">
-        
+
+
+        <div class="row">
+            <ul class="col-12 text-center adminMenu">
+                <li><a href="#comms" style="margin-right: 5%;">Commentaires</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#chapitres">Chapitres</a></li>
+                <li><a href="#edition">Edition</a></li>
+            </ul>
+        </div>
+        <br/>
+        <br/>
         <div class="row">
             <div class="col-sm-12 col-lg-6 ">
-            <h2>Section commentaire</h2>
+            <h2 id='comms'>Section commentaire</h2>
                 <?php
                     while($donnes = $reponse -> fetch()) {
                 ?>
@@ -55,17 +66,17 @@
             </div>
         </div>
 
-        <h2 class="text-center">Section articles</h2>
+        <h2 class="text-center" id="articles">Section articles</h2>
         <div class="row">
             <div class="col-12">
                 <?php 
                     while($donnes = $articles -> fetch()) { 
                 ?>
                 <p>
-                    <strong><?php echo $donnes['date_publication']; ?></strong> :<?php echo $donnes['titre'] ?>" > <?php echo $donnes['titre']; ?> <br/>
+                    <strong><?php echo $donnes['date_publication']; ?></strong> :<?php echo $donnes['titre'] ?>" <br/>
                     <?php echo $donnes['contenu']; ?>
 
-                    <a href="\Projet4\index.php?action=updateArticle">Modifier l'article</a>
+                    <a href="\Projet4\index.php?action=upArticle&id= <?php echo $donnes['id']?>">Modifier l'article</a>
                     <div><a href="\Projet4\index.php?action=delArticle&id=<?php echo $donnes['id'] ?>">Supprimer l'article</a></div>
                 </p>
 
@@ -75,7 +86,7 @@
             </div>
         </div>
 
-        <h2 class="text-center">Section chapitres</h2>
+        <h2 class="text-center" id="chapitres">Section chapitres</h2>
         <div class="row">
             <div class="col-12">
                 <?php 
@@ -96,7 +107,7 @@
             </div>
         </div>
 
-        <h2 class="text-center"> Section édition</h2>
+        <h2 class="text-center" id="edition"> Section édition</h2>
         <div class="row">
             <div class="col-6 text-center">
                 <a href="\Projet4\index.php?action=writeChapter" class="adminButton" > Rédiger un chapitre </a>

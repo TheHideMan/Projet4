@@ -81,7 +81,12 @@
         case 'delChapter':
             $chapter_controller -> delChapter($_GET['id']);
             break;
+        case 'upArticle':
+            $reponse = $article_controller -> modifierArticle($_GET['id']);
+            include('view/updateArticle.php');
+            break;
         case 'updateArticle':
+            $article_controller -> upArticle($_GET['id'],$_POST['titre'], $_POST['date'], $_POST['contenu']);
             break;
         case 'updateChapter':
             break;

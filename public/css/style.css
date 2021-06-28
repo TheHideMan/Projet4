@@ -136,8 +136,28 @@ img {vertical-align: middle;}
 }
 
 .adminButton {
+    z-index: 0;
     border: 1px solid black;
     padding: 2%;
+    text-decoration: none;
+}
+
+.adminMenu {
+    
+    display: flex;
+}
+
+
+.adminMenu a { 
+    border: 1px solid black;
+    text-decoration: none;
+    margin: 5%;
+    padding: 5%;
+}
+
+.adminMenu li {
+    
+    margin-right: 5%;
     text-decoration: none;
 }
 
