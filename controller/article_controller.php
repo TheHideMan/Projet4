@@ -26,7 +26,6 @@ class ArticleController {
         return($reponse);
     }
     
-    
     public function afficheArticleDemande($titre) {
         $articleManager = new ArticleManager;
         $postManager = new PostManager;

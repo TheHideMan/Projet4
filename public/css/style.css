@@ -145,20 +145,16 @@ img {vertical-align: middle;}
 .adminMenu {
     
     display: flex;
+    text-decoration: none;
 }
 
 
 .adminMenu a { 
     border: 1px solid black;
     text-decoration: none;
-    margin: 5%;
-    padding: 5%;
-}
-
-.adminMenu li {
-    
     margin-right: 5%;
-    text-decoration: none;
+    padding: 1%;
+   
 }
 
 footer {

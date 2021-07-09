@@ -19,7 +19,7 @@
             } else {
         ?>
             <li class="nav-item"> 
-                <div class="identification" style='display: inline'>
+                <div style='display: inline'>
                     <button type="button" class="btn btn-outline-primary collapsed" data-toggle="collapse" data-target="#connexionContent" aria-expanded="false" > S'identifier </button>
                     <form id="connexionContent" class="collapse" method="POST" action="\Projet4\index.php?action=connexion">
                         <input type="text" name="user" placeholder="Utilisateur"/>
@@ -31,5 +31,15 @@
         <?php
             }
         ?>
+        <li class="nav-item"> 
+                <div style='display: inline'>
+                    <button type="button" class="btn btn-outline-primary collapsed" data-toggle="collapse" data-target="#inscriptionContent" aria-expanded="false" > S'inscrire </button>
+                    <form id="inscriptionContent" class="collapse" method="POST" action="\Projet4\index.php?action=inscription">
+                        <input type="text" name="user" placeholder="Utilisateur"/>
+                        <input type="password" name="password" placeholder="Mot de passe"/>
+                        <input type="submit" name="inscription" value="Inscription"/>
+                    </form> 
+                </div>
+            </li>
     </ul> 
 </nav>

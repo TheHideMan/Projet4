@@ -36,10 +36,12 @@
             break;
         case 'connexion':
             $user_controller -> connexion();
-            include('view/connexion.php');
             break;
         case 'deconnexion':
             $user_controller -> deconnexion();
+            break;
+        case 'inscription':
+            $user_controller -> inscription();
             break;
         case 'administration':
             include('view/administration.php');
@@ -86,7 +88,7 @@
             include('view/updateArticle.php');
             break;
         case 'updateArticle':
-            $article_controller -> upArticle($_GET['id'],$_POST['titre'], $_POST['date'], $_POST['contenu']);
+            $article_controller -> upArticle($_POST['id'], $_POST['date'], $_POST['titre'], $_POST['contenu']);
             break;
         case 'updateChapter':
             break;

@@ -17,7 +17,6 @@ class ChapterManager extends Manager {
         return $req;
     }
 
-
     public function ajouteChapter($titre, $contenu) {
         $db = $this -> dbconnect();
         $req = $db -> prepare("INSERT INTO chapitres (titre, manu) VALUE (?, ?)");

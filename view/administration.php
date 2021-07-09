@@ -17,14 +17,13 @@
 
     <div class="container-fluid">
 
-
         <div class="row">
-            <ul class="col-12 text-center adminMenu">
-                <li><a href="#comms" style="margin-right: 5%;">Commentaires</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#chapitres">Chapitres</a></li>
-                <li><a href="#edition">Edition</a></li>
-            </ul>
+            <div class="col-12 adminMenu">
+                <a href="#comms" style="margin-right: 5%;">Commentaires</a>
+                <a href="#articles">Articles</a>
+                <a href="#chapitres">Chapitres</a>
+                <a href="#edition">Edition</a>
+            </div>
         </div>
         <br/>
         <br/>
@@ -65,7 +64,7 @@
                    
             </div>
         </div>
-
+        
         <h2 class="text-center" id="articles">Section articles</h2>
         <div class="row">
             <div class="col-12">
