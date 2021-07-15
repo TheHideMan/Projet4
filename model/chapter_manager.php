@@ -30,7 +30,7 @@ class ChapterManager extends Manager {
         $req -> execute();
     }
 
-    public function modifierChapitre($id) {
+    public function modifChapitre($id) {
         $db = $this -> dbconnect();
         $req = $db -> prepare("SELECT id, titre, manu FROM chapitres WHERE id = :id");
         $req -> bindValue(':id', $id, PDO::PARAM_INT);

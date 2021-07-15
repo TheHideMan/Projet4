@@ -96,7 +96,7 @@
                     
                         <?php echo html_entity_decode($donnes['manu']); ?> 
                     
-                    <a href="\Projet4\index.php?action=updateChapter">Modifier le chapitre</a>
+                    <a href="\Projet4\index.php?action=upChapter&id= <?php echo $donnes['id']?>">Modifier le chapitre</a>
                     <div><a href="\Projet4\index.php?action=delChapter&id=<?php echo $donnes['id'] ?>">Supprimer le chapitre</a></div>
                 </p>
 

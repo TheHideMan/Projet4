@@ -37,6 +37,14 @@ class ChapterController {
         header ("Location: $localisation");
     }
 
+    public function modifierChapitre($id) {
+        $chapterManager = new ChapterManager;
+
+        $retour = $chapterManager -> modifChapitre($id);
+        return ($retour);
+
+    }
+
     public function upChapter($id, $titre, $txt) {
         $chapterManager = new ChapterManager;
         $localisation = '/Projet4/index.php?action=administration';
@@ -44,16 +52,6 @@ class ChapterController {
         $chapterManager -> updateChapitre($id, $titre, $txt);
         header ("Location: $localisation");
     }
-
-    public function modifierChapitre($id) {
-        $chapterManager = new ChapterManager;
-
-        $retour = $chapterManager -> modifierChapitre($id);
-        return ($retour);
-
-    }
-    
-
 
 
 }
