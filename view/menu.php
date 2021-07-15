@@ -32,7 +32,7 @@
             }
         ?>
         <li class="nav-item"> 
-                <div style='display: inline'>
+                <div style='display: none'>
                     <button type="button" class="btn btn-outline-primary collapsed" data-toggle="collapse" data-target="#inscriptionContent" aria-expanded="false" > S'inscrire </button>
                     <form id="inscriptionContent" class="collapse" method="POST" action="\Projet4\index.php?action=inscription">
                         <input type="text" name="user" placeholder="Utilisateur"/>

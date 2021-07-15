@@ -30,6 +30,24 @@ class ChapterManager extends Manager {
         $req -> execute();
     }
 
+    public function modifierChapitre($id) {
+        $db = $this -> dbconnect();
+        $req = $db -> prepare("SELECT id, titre, manu FROM chapitres WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_INT);
+        $req -> execute();
+        return $req;
+    }
+
+    public function updateChapitre($id, $titre, $txt) {
+        $db = $this -> dbconnect();
+        $req = $db -> prepare("UPDATE chapitres SET titre = :titre, manu = :txt WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_INT);
+        $req -> bindValue(':titre', $titre, PDO::PARAM_STR);
+        $req -> bindValue(':txt', $txt, PDO::PARAM_STR);
+        $req -> execute();
+    }
+
+
 }
 
 ?>

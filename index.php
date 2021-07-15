@@ -87,10 +87,15 @@
             $reponse = $article_controller -> modifierArticle($_GET['id']);
             include('view/updateArticle.php');
             break;
+        case 'upChapter':
+            $reponse = $chapter_controller -> modifierChapitre($_GET['id']);
+            include('view/updateChapter.php');
+            break;
         case 'updateArticle':
             $article_controller -> upArticle($_POST['id'], $_POST['date'], $_POST['titre'], $_POST['contenu']);
             break;
         case 'updateChapter':
+            $chapter_controller -> upChapter($_POST['id'], $_POST['titre'], $_POST['manu']);
             break;
         default: 
             include('view/accueil.php');
