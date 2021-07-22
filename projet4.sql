@@ -2,10 +2,10 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jul 15, 2021 at 11:52 AM
--- Server version: 5.6.34-log
--- PHP Version: 7.2.1
+-- Hôte : localhost:3306
+-- Généré le :  jeu. 22 juil. 2021 à 12:36
+-- Version du serveur :  5.6.34-log
+-- Version de PHP :  7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `projet4`
+-- Base de données :  `projet4`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `articles`
+-- Structure de la table `articles`
 --
 
 CREATE TABLE `articles` (
@@ -36,7 +36,7 @@ CREATE TABLE `articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `articles`
+-- Déchargement des données de la table `articles`
 --
 
 INSERT INTO `articles` (`id`, `date_publication`, `titre`, `contenu`) VALUES
@@ -46,12 +46,12 @@ INSERT INTO `articles` (`id`, `date_publication`, `titre`, `contenu`) VALUES
 (4, '2021-04-11', '4eme article', 'Morbi iaculis purus ut nisl sodales ultrices. Duis vitae aliquam dui, sed laoreet orci. Curabitur est mauris, laoreet id nibh a, mollis ultricies purus. Suspendisse sed mauris tempus, mollis tortor ut, lacinia ex. Sed consectetur lectus ac enim dapibus, quis pellentesque augue tincidunt. Cras vulputate mauris ut velit euismod, cursus tempus turpis pulvinar. Integer ac odio lorem. Maecenas sit amet odio ac arcu pharetra dignissim condimentum et risus. Sed sit amet metus porta, porttitor odio sit amet, pulvinar sapien. Sed eu sapien laoreet, semper dolor at, tincidunt mauris. Pellentesque congue vehicula ante id fringilla.'),
 (5, '2021-04-12', '5eme article', '<p>Nisi autem rerum natura perspecta erit, nullo modo poterimus sensuum iudicia defendere. Huius ego nunc auctoritatem sequens idem faciam. Item de contrariis, a quibus ad genera formasque generum venerunt. Quid de Platone aut de Democrito loquar? Bestiarum vero nullum iudicium puto. Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere. Cave putes quicquam esse verius. Nulla profecto est, quin suam vim retineat a primo ad extremum. Quem ad modum quis ambulet, sedeat, qui ductus oris, qui vultus in quoque sit? Atque his de rebus et splendida est eorum et illustris oratio.</p>'),
 (6, '2021-04-21', '6eme article', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Tu vero, inquam, ducas licet, si sequetur; Dat enim intervalla et relaxat. Quid Zeno? Duo Reges: constructio interrete. Tu autem negas fortem esse quemquam posse, qui dolorem malum putet. Etiam beatissimum? Apud imperitos tum illa dicta sunt, aliquid etiam coronae datum;</p>'),
-(9, '2021-12-19', 'ARTICLE 19', '<p><span style=\"color: #222222; font-family: \'PT Sans\', \'Droid Sans\', Arial, sans-serif; font-size: 16px;\">Age nunc isti doceant, vel tu potius quis enim ista melius? Dolere malum est: in crucem qui agitur, beatus esse non potest. Non igitur potestis voluptate omnia dirigentes aut tueri aut retinere virtutem. Non igitur de improbo, sed de callido improbo quaerimus, qualis Q. Venit ad extremum; Nec lapathi suavitatem acupenseri Galloni Laelius anteponebat, sed suavitatem ipsam neglegebat; Nam, ut paulo ante docui, augendae voluptatis finis est doloris omnis amotio. Quid igitur dubitamus in tota eius natura quaerere quid sit effectum? Idem etiam dolorem saepe perpetiuntur, ne, si id non faciant, incidant in maiorem.</span></p>');
+(10, '2021-12-19', 'article 19', '<p>lorem ipsum dolor it&nbsp;</p>');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chapitres`
+-- Structure de la table `chapitres`
 --
 
 CREATE TABLE `chapitres` (
@@ -61,7 +61,7 @@ CREATE TABLE `chapitres` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `chapitres`
+-- Déchargement des données de la table `chapitres`
 --
 
 INSERT INTO `chapitres` (`id`, `titre`, `manu`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `chapitres` (`id`, `titre`, `manu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `connexion`
+-- Structure de la table `connexion`
 --
 
 CREATE TABLE `connexion` (
@@ -81,7 +81,7 @@ CREATE TABLE `connexion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `connexion`
+-- Déchargement des données de la table `connexion`
 --
 
 INSERT INTO `connexion` (`User`, `Password`) VALUES
@@ -90,12 +90,12 @@ INSERT INTO `connexion` (`User`, `Password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Structure de la table `posts`
 --
 
 CREATE TABLE `posts` (
   `id_post` int(11) NOT NULL,
-  `article_commenté` text NOT NULL,
+  `id_article` int(11) NOT NULL,
   `cal` text NOT NULL,
   `pseudo` text NOT NULL,
   `contenu` text NOT NULL,
@@ -103,64 +103,60 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id_post`, `article_commenté`, `cal`, `pseudo`, `contenu`, `signale`) VALUES
-(4, '1er article', '21-03-22 01:17:08', 'francois ', '&lt;p&gt;int&amp;eacute;ressant&amp;nbsp;&lt;/p&gt;', 1),
-(7, '4eme article', '21-04-01 12:44:13', 'dupond', '&lt;p&gt;super site&amp;nbsp;&lt;/p&gt;', 1),
-(8, '1er article', '21-04-22 03:49:50', 'anonymous', '&lt;p&gt;ah ouais&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;', 0),
-(9, 'ARTICLE 5', '21-04-30 10:56:11', 'didier ', '&lt;p&gt;je n\'y avais pas pens&amp;eacute; merci&amp;nbsp;&lt;/p&gt;', 0),
-(10, '2eme article', '21-04-30 11:34:59', 'valentin ', '&lt;p&gt;trop bien&amp;nbsp;&lt;/p&gt;', 0),
-(11, '1er article', '21-05-11 01:37:09', 'luc ', '&lt;p&gt;merci !&lt;/p&gt;', 0),
-(12, 'ARTICLE 6', '21-06-11 02:01:59', 'vladimir ', '&lt;p&gt;Plus d infos ?&amp;nbsp;&lt;/p&gt;', 0),
-(15, 'Article 19', '21-06-19 12:38:37', 'pierre ', '&lt;p&gt;ok&amp;nbsp;&lt;/p&gt;', 0),
-(16, 'Article 19', '21-06-19 12:38:43', 'paul ', '&lt;p&gt;super&amp;nbsp;&lt;/p&gt;', 0);
-
---
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `articles`
+-- Index pour la table `articles`
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `titre` (`titre`);
 
 --
--- Indexes for table `chapitres`
+-- Index pour la table `chapitres`
 --
 ALTER TABLE `chapitres`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `posts`
+-- Index pour la table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id_post`);
+  ADD PRIMARY KEY (`id_post`),
+  ADD KEY `cascade` (`id_article`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `articles`
+-- AUTO_INCREMENT pour la table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `chapitres`
+-- AUTO_INCREMENT pour la table `chapitres`
 --
 ALTER TABLE `chapitres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `posts`
+-- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `cascade` FOREIGN KEY (`id_article`) REFERENCES `articles` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
