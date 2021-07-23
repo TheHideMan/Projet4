@@ -13,7 +13,7 @@
                     while($donnes = $reponse -> fetch())  {
                 ?>
                 <p>
-                    <strong><?php echo $donnes['date_publication']; ?></strong> : <a href="../Projet4/index.php?action=currentArticle&titre=<?php echo $donnes['titre'] ?>" > <?php echo $donnes['titre']; ?></a> <br/>
+                    <strong><?php echo $donnes['date_publication']; ?></strong> : <a href="../Projet4/index.php?action=currentArticle&id=<?php echo $donnes['id'] ?>" > <?php echo $donnes['titre']; ?></a> <br/>
                     <?php echo $donnes['contenu']; ?>
                 </p>
                 <?php

@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-12" >
                 <h2 class="text-center">SECTION COMMENTAIRE</h2>
-                <form method="post" action="/Projet4/index.php?action=envoieCommentaire&titre=<?php echo $_GET['titre'] ?>" >
+                <form method="post" action="/Projet4/index.php?action=envoieCommentaire&ida=<?php echo $_GET['id'] ?>" >
                     <input type="text" name="pseudo" placeholder="Votre pseudo" required/> <br/><br/>
                     <textarea name="commentaire" placeholder="Votre commentaire" ></textarea><br/>
                     <input type="submit" value="Poster le commentaire" name="poster" /><br/><br/>

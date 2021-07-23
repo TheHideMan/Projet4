@@ -7,11 +7,7 @@ class Manager {
         return $db;
     } 
 
-    protected function executeRequete($requete) {
-        $db = $this -> dbconnect();
-        $req = $db -> query($requete);
-        return $req;
-    }
+    
 }
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  jeu. 22 juil. 2021 à 12:36
+-- Généré le :  ven. 23 juil. 2021 à 14:09
 -- Version du serveur :  5.6.34-log
 -- Version de PHP :  7.2.1
 
@@ -103,6 +103,14 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Déchargement des données de la table `posts`
+--
+
+INSERT INTO `posts` (`id_post`, `id_article`, `cal`, `pseudo`, `contenu`, `signale`) VALUES
+(2, 1, '23/07/2021', 'thomas ', 'super site !', 0),
+(3, 1, '23/07/2021', 'lilian ', 'intéressant merci ', 0);
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -146,7 +154,7 @@ ALTER TABLE `chapitres`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Contraintes pour les tables déchargées

@@ -15,10 +15,10 @@ class ArticleManager extends Manager {
         return $req;
     }
     
-    public function demandeArticle($titre) {
+    public function demandeArticle($id) {
         $db = $this -> dbconnect();
-        $req = $db -> prepare ("SELECT id, date_publication, titre, contenu FROM articles WHERE titre = :titre");
-        $req -> bindValue(':titre', $titre, PDO::PARAM_STR);
+        $req = $db -> prepare ("SELECT id, date_publication, titre, contenu FROM articles WHERE id = :id");
+        $req -> bindValue(':id', $id, PDO::PARAM_STR);
         $req -> execute();
         return $req;
     }

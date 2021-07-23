@@ -35,7 +35,7 @@
                 ?>
 
                 <p class="border rounded">
-                    <strong><?php echo $donnes['article_commenté']; ?></strong> <?php echo $donnes['cal']; ?> : <?php echo $donnes['pseudo']; ?> <br/>
+                    <strong>Article <?php echo $donnes['id_article']; ?> -</strong> <?php echo $donnes['cal']; ?> : <?php echo $donnes['pseudo']; ?> <br/>
                     <?php echo html_entity_decode($donnes['contenu']); ?> <br/>
                     <a href="\Projet4\index.php?action=delComms&id=<?php echo $donnes['id_post'] ?>">Supprimer le commentaire </a>
                 </p>
@@ -53,7 +53,7 @@
                 ?>
                 
                 <p class="border rounded" style="background-color:red">
-                    <strong><?php echo $data['article_commenté']; ?></strong> <?php echo $data['cal']; ?> : <?php echo $data['pseudo']; ?> <br/>
+                    <strong>Article<?php echo $data['id_article']; ?> -</strong> <?php echo $data['cal']; ?> : <?php echo $data['pseudo']; ?> <br/>
                     <?php echo html_entity_decode($data['contenu']); ?> <br/>
                     <a href="\Projet4\index.php?action=delComms&id=<?php echo $data['id_post'] ?>">Supprimer le commentaire </a>
                 </p>

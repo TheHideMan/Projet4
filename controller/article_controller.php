@@ -26,13 +26,13 @@ class ArticleController {
         return($reponse);
     }
     
-    public function afficheArticleDemande($titre) {
+    public function afficheArticleDemande($id) {
         $articleManager = new ArticleManager;
         $postManager = new PostManager;
-        $reponse = $articleManager -> demandeArticle($titre);
+        $reponse = $articleManager -> demandeArticle($id);
         $reponse -> execute();
 
-        $retour = $postManager -> getPosts($titre);
+        $retour = $postManager -> getPosts($id);
         $retour -> execute();
 
         $tab_retour = array($reponse, $retour);
