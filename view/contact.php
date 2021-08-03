@@ -4,7 +4,7 @@
        
     <h1 class="text-center">PAGE DE CONTACT </h1>
     
-    <div class="container-fluid">
+    <article class="container-fluid">
        <div class="row">
             <p class="col-12"> Vous pouvez nous contacter en utilisant le formulaire ci-dessous</p>
             <form class="col-12" action="\Projet4\index.php?action=envoie" method="post">
@@ -18,7 +18,7 @@
             </form>
         </div>
         
-    </div>
+    </article>
     
     
 

@@ -4,7 +4,7 @@
     
     <h1 class="text-center">VOIR CHAPITRE </h1>
     
-    <div class="container-fluid">
+    <article class="container-fluid">
         <div class="row">
             <div class="col-12">
 
@@ -24,7 +24,7 @@
             </div>
             
         </div>
-    </div>
+    </article>
     
 
     

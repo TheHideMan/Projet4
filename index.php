@@ -47,7 +47,7 @@
             include('view/administration.php');
             break;
         case 'currentArticle':
-            $reponse = $article_controller -> afficheArticleDemande($_GET['titre']);
+            $reponse = $article_controller -> afficheArticleDemande($_GET['id']);
             $article = $reponse[0];
             $liste_comms = $reponse[1];
             include('view/currentArticle.php');
@@ -63,7 +63,7 @@
             include('view/writeArticle.php');
             break;
         case 'envoieCommentaire':
-            $post_controller -> sendPost($_GET['titre']);
+            $post_controller -> sendPost($_GET['ida']);
             break;
         case 'delComms': 
             $post_controller -> delPost($_GET['id']);

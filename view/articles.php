@@ -6,7 +6,7 @@
     <h2 class="text-center">Retrouvez tous les articles sur cette page !</h2>
     <img src='./public/images/article.jpg' class="img-responsive col-lg-12 " alt="page de journal" />
     
-    <div class="container-fluid">
+    <article class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <?php
@@ -22,7 +22,7 @@
             </div>
             
         </div>
-    </div>
+    </article>
     
 
     

@@ -4,7 +4,7 @@
     
     <h1 class="text-center">VOIR ARTICLE </h1>
     
-    <div class="container-fluid">
+    <article class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <?php
@@ -21,9 +21,9 @@
                     }
                 ?>
             </div> 
-        </div>
+    </article>
 
-        <div class="row">
+        <article class="row">
             <div class="col-12" >
                 <h2 class="text-center">SECTION COMMENTAIRE</h2>
                 <form method="post" action="/Projet4/index.php?action=envoieCommentaire&ida=<?php echo $_GET['id'] ?>" >
@@ -49,7 +49,7 @@
                 </div>
 
             </div>
-        </div>
+        </article>
 
     </div>
     

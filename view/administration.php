@@ -27,18 +27,19 @@
         </div>
         <br/>
         <br/>
-        <div class="row">
+        <article class="row">
             <div class="col-sm-12 col-lg-6 ">
             <h2 id='comms'>Section commentaire</h2>
                 <?php
                     while($donnes = $reponse -> fetch()) {
                 ?>
 
-                <p class="border rounded">
+                <div class="border rounded">
                     <strong>Article <?php echo $donnes['id_article']; ?> -</strong> <?php echo $donnes['cal']; ?> : <?php echo $donnes['pseudo']; ?> <br/>
-                    <?php echo html_entity_decode($donnes['contenu']); ?> <br/>
-                    <a href="\Projet4\index.php?action=delComms&id=<?php echo $donnes['id_post'] ?>">Supprimer le commentaire </a>
-                </p>
+                    <?php echo html_entity_decode($donnes['contenu']); ?>
+                    <a href="\Projet4\index.php?action=delComms&id=<?php echo $donnes['id_post'] ?>">Supprimer le commentaire </a> 
+                </div>
+                <br/>
 
                 <?php 
                     }
@@ -52,21 +53,21 @@
                     while($data = $retour -> fetch()) {
                 ?>
                 
-                <p class="border rounded" style="background-color:red">
+                <div class="border rounded" style="background-color:red">
                     <strong>Article<?php echo $data['id_article']; ?> -</strong> <?php echo $data['cal']; ?> : <?php echo $data['pseudo']; ?> <br/>
-                    <?php echo html_entity_decode($data['contenu']); ?> <br/>
+                    <?php echo html_entity_decode($data['contenu']); ?> 
                     <a href="\Projet4\index.php?action=delComms&id=<?php echo $data['id_post'] ?>">Supprimer le commentaire </a>
-                </p>
+                    </div>
 
                 <?php 
                     }
                 ?>
                    
             </div>
-        </div>
+        </article>
         
         <h2 class="text-center" id="articles">Section articles</h2>
-        <div class="row">
+        <article class="row">
             <div class="col-12">
                 <?php 
                     while($donnes = $articles -> fetch()) { 
@@ -83,10 +84,10 @@
                     }
                 ?>
             </div>
-        </div>
+        </article>
 
         <h2 class="text-center" id="chapitres">Section chapitres</h2>
-        <div class="row">
+        <article class="row">
             <div class="col-12">
                 <?php 
                     while($donnes = $chapters -> fetch()) { 
@@ -104,17 +105,17 @@
                     }
                 ?>
             </div>
-        </div>
+        </article>
 
         <h2 class="text-center" id="edition"> Section édition</h2>
-        <div class="row">
+        <aside class="row">
             <div class="col-6 text-center">
                 <a href="\Projet4\index.php?action=writeChapter" class="adminButton" > Rédiger un chapitre </a>
             </div>
             <div class="col-6 text-center">
                 <a href="\Projet4\index.php?action=writeArticle" class="adminButton" > Rédiger un article </a>
             </div>
-        </div>
+        </aside>
 
         
         

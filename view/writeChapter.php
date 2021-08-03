@@ -4,7 +4,7 @@
        
     <h1 class="text-center">PAGE D' ECRITURE </h1>
     
-    <div class="container-fluid">
+    <article class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <form method="post" action="/Projet4/index.php?action=envoieChapitre">
@@ -15,7 +15,7 @@
             </div>
 
         </div>
-    </div>
+    </article>
     
     
 

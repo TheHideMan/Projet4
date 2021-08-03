@@ -6,7 +6,7 @@
     <h2 class="text-center">Vous retrouverez sur cette page tous les chapitres du nouveau roman de Jean Forteroche : "Billet simple pour l'Alaska"</h2>
     <img src='./public/images/livre3.jpg' class="img-responsive col-lg-12 " alt="une tranche de livre" />
 
-    <div class="container-fluid">
+    <article class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <?php
@@ -26,7 +26,7 @@
             </div>
             
         </div>
-    </div>
+    </article>
     
 
 

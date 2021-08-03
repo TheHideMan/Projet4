@@ -45,7 +45,7 @@
         <input type="image" id="resume" src="/Projet4/public/images/logoPlay.png" alt=" Play">
     </article>
     
-    <div class="container-fluid text-center">
+    <article class="container-fluid text-center">
         <div class="row">
             <div class="col-sm-12 col-lg-12 border">
                 <h2>Retrouvez les derniers articles en date ici !</h2>
@@ -55,7 +55,7 @@
                 ?>
             </div>
         </div>
-    </div>
+    </article>
     
     <br/>
     <br/>
