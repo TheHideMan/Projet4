@@ -1,7 +1,7 @@
 <?php $title = 'Projet 4 articles'; ?>
       
 <?php ob_start(); ?>
-    
+    <title>Page d'articles</title>
     <h1 class="text-center">PAGE D' ARTICLES </h1>
     <h2 class="text-center">Retrouvez tous les articles sur cette page !</h2>
     <img src='./public/images/article.jpg' class="img-responsive col-lg-12 " alt="page de journal" />

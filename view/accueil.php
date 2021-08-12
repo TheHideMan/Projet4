@@ -1,7 +1,7 @@
 <?php $title = 'Projet 4 accueil'; ?>
       
 <?php ob_start(); ?>
-       
+    <title>Page d'accueil</title>  
     <h1 class="text-center h1">BIENVENUE SUR LE SITE DE JEAN FORTEROCHE !</h1>
 
     <article class="container-fluid" id="slideContainer">

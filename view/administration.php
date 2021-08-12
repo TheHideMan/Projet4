@@ -12,7 +12,6 @@
 ?>
       
 <?php ob_start(); ?>
-       
     <h1 class="text-center">PAGE D'ADMINISTRATION </h1>
 
     <div class="container-fluid">
@@ -35,7 +34,7 @@
                 ?>
 
                 <div class="border rounded">
-                    <strong>Article <?php echo $donnes['id_article']; ?> -</strong> <?php echo $donnes['cal']; ?> : <?php echo $donnes['pseudo']; ?> <br/>
+                    <strong>Article <?php echo $donnes['titre']; ?> -</strong> <?php echo $donnes['cal']; ?> : <?php echo $donnes['pseudo']; ?> <br/>
                     <?php echo html_entity_decode($donnes['contenu']); ?>
                     <a href="\Projet4\index.php?action=delComms&id=<?php echo $donnes['id_post'] ?>">Supprimer le commentaire </a> 
                 </div>

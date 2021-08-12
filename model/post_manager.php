@@ -27,7 +27,7 @@
 
         public function getAllPosts() {
             $db = $this -> dbconnect();
-            $req = $db -> query("SELECT * FROM posts ORDER BY id_article");
+            $req = $db -> query("SELECT * FROM posts JOIN articles ON articles.id = posts.id_article ORDER BY id_article");
             $req -> execute();
     
             return $req;

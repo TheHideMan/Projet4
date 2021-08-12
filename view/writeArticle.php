@@ -1,6 +1,8 @@
 <?php $title = 'Projet 4'; ?>
       
 <?php ob_start(); ?>
+
+    <title>Ecriture d'article</title>
        
     <h1 class="text-center">PAGE D' ECRITURE </h1>
     
